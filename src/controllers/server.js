@@ -1,5 +1,5 @@
 import express from 'express'
-import { routerApi } from "../routers/routerApi.js"
+import {routerApi} from "../routers/routerApi.js"
 import { routerApiTest } from "../routers/routerApiTest.js"
 import  routerWeb  from "../routers/routerWeb.js"
 import { engine } from 'express-handlebars'  //handlebars
@@ -54,7 +54,8 @@ const yargs = parseArgs(process.argv.slice(2))
 const argv = yargs.alias({p: 'port'}).default({port: PUERTO_POR_DEFECTO}).argv
 
 const puerto = argv.port
-
+console.log('Puerto')
+console.log(puerto)
 
   function desconectar() {
     return new Promise((resolve, reject) => {
